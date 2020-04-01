@@ -22,7 +22,7 @@
 
 
 
-​					 <img src="https://www.zhihu.com/equation?tex=\begin{aligned} L(\mathcal{I}) &=\mathbf{b}+\mathrm{P} \cdot E(F(\mathcal{I})) \\ &=\mathbf{b}+\mathrm{P} \cdot\left(\alpha_{1}^{\mathcal{I}}, \ldots, \alpha_{n}^{\mathcal{I}}\right)^{T} \end{aligned}" alt="\begin{aligned} L(\mathcal{I}) &=\mathbf{b}+\mathrm{P} \cdot E(F(\mathcal{I})) \\ &=\mathbf{b}+\mathrm{P} \cdot\left(\alpha_{1}^{\mathcal{I}}, \ldots, \alpha_{n}^{\mathcal{I}}\right)^{T} \end{aligned}" class="ee_img tr_noresize" eeimg="1">      （1）
+​					$ <img src="https://www.zhihu.com/equation?tex=\begin{aligned} L(\mathcal{I}) &=\mathbf{b}+\mathrm{P} \cdot E(F(\mathcal{I})) \\ &=\mathbf{b}+\mathrm{P} \cdot\left(\alpha_{1}^{\mathcal{I}}, \ldots, \alpha_{n}^{\mathcal{I}}\right)^{T} \end{aligned}" alt="\begin{aligned} L(\mathcal{I}) &=\mathbf{b}+\mathrm{P} \cdot E(F(\mathcal{I})) \\ &=\mathbf{b}+\mathrm{P} \cdot\left(\alpha_{1}^{\mathcal{I}}, \ldots, \alpha_{n}^{\mathcal{I}}\right)^{T} \end{aligned}" class="ee_img tr_noresize" eeimg="1"> $     （1）
 
 ​	
 

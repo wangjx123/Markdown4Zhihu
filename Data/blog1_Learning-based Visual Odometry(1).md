@@ -22,7 +22,7 @@
 
 
 
-​					$\begin{aligned} L(\mathcal{I}) &=\mathbf{b}+\mathrm{P} \cdot E(F(\mathcal{I})) \\ &=\mathbf{b}+\mathrm{P} \cdot\left(\alpha_{1}^{\mathcal{I}}, \ldots, \alpha_{n}^{\mathcal{I}}\right)^{T} \end{aligned}$     （1）
+​					$$\begin{aligned} L(\mathcal{I}) &=\mathbf{b}+\mathrm{P} \cdot E(F(\mathcal{I})) \\ &=\mathbf{b}+\mathrm{P} \cdot\left(\alpha_{1}^{\mathcal{I}}, \ldots, \alpha_{n}^{\mathcal{I}}\right)^{T} \end{aligned}$$     （1）
 
 ​	
 
