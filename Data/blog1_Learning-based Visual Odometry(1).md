@@ -50,7 +50,7 @@
 
 ### 实验证明
 
-1. Settings
+1. **Settings**
 
    训练数据集与测试数据集中的真值都是由SfM(Sturcture From Motion)方法得到。基于CNN的方法选择了具有代表性的PoseNet和MapNet，基于结构的方法选择了Active Search。Active Search 使用了Root-SIFT特征确定了2D-3D匹配关系，位姿估计由RANSAC循环中的P3P方法得到，再经过一个非线性的优化。$^{[1]}$
 
@@ -58,9 +58,9 @@
 
    如果不考虑相机的抖动，此时相机的translation部分应该在一条直线上。那么此时的训练图像作为input时，CNN的base translation是不是就在一条直线上呢？如果测试图像不在这条直线上，是不是就无法预测出准确的pose呢？  如图1所示，这里表示两个场景，两次训练过程。以第一个场景为例（图1左边的四幅图），首先MapNet确实如此，左上角是对base translation可视化，PoseCNN（左下角）似乎噪声更多些。图中深红色的线是训练路径，绿色的线是测试路径。深蓝色的线是MapNet的测试效果，紫色是PoseCnn测试效果，浅蓝色的线是几何法的测试效果。从中基本可以证实作者猜想，当给出与训练数据不同直线下的场景，APR方法失效了，而传统法效果不错。
 
-   <img src="截屏2020-04-0111.49.47.png" alt="截屏2020-04-0111.49.47" style="zoom:50%;" />
+   <img src="blog1_Learning-based Visual Odometry(1)/截屏2020-04-0111.49.47.png" alt="截屏2020-04-0111.49.47" style="zoom:50%;" />
 
-   ​															    图1
+   ​															   	 图1
 
 3.**一般化的训练场景**
 
@@ -68,11 +68,11 @@
 
 所有实验内容可参看作者给出的视频 $^{[2]}$ ，很有意思。
 
-<img src="截屏2020-04-0111.53.03.png" alt="截屏2020-04-0111.53.03" style="zoom:50%;" />
+![截屏2020-04-0111.53.03](blog1_Learning-based Visual Odometry(1)/截屏2020-04-0111.53.03.png)
 
 ​																		图2
 
-<img src="截屏2020-04-0111.54.01.png" alt="截屏2020-04-0111.54.01" style="zoom:50%;" />
+![截屏2020-04-0111.54.01](blog1_Learning-based Visual Odometry(1)/截屏2020-04-0111.54.01.png)
 
 ​																	图3	
 
