@@ -22,7 +22,7 @@
 
 
 
-​					$ <img src="https://www.zhihu.com/equation?tex=\begin{aligned} L(\mathcal{I}) &=\mathbf{b}+\mathrm{P} \cdot E(F(\mathcal{I})) \\ &=\mathbf{b}+\mathrm{P} \cdot\left(\alpha_{1}^{\mathcal{I}}, \ldots, \alpha_{n}^{\mathcal{I}}\right)^{T} \end{aligned}" alt="\begin{aligned} L(\mathcal{I}) &=\mathbf{b}+\mathrm{P} \cdot E(F(\mathcal{I})) \\ &=\mathbf{b}+\mathrm{P} \cdot\left(\alpha_{1}^{\mathcal{I}}, \ldots, \alpha_{n}^{\mathcal{I}}\right)^{T} \end{aligned}" class="ee_img tr_noresize" eeimg="1"> $     （1）
+​					 <img src="https://www.zhihu.com/equation?tex=\begin{aligned} L(\mathcal{I}) &=\mathbf{b}+\mathrm{P} \cdot E(F(\mathcal{I})) \\ &=\mathbf{b}+\mathrm{P} \cdot\left(\alpha_{1}^{\mathcal{I}}, \ldots, \alpha_{n}^{\mathcal{I}}\right)^{T} \end{aligned}" alt="\begin{aligned} L(\mathcal{I}) &=\mathbf{b}+\mathrm{P} \cdot E(F(\mathcal{I})) \\ &=\mathbf{b}+\mathrm{P} \cdot\left(\alpha_{1}^{\mathcal{I}}, \ldots, \alpha_{n}^{\mathcal{I}}\right)^{T} \end{aligned}" class="ee_img tr_noresize" eeimg="1">      （1）
 
 ​	
 
@@ -94,7 +94,7 @@
 
 ​		式（4）中已经体现出了图像检索与APR之间有很强的相关性。对于一副测试图像的hidden feature，可以将其分解成与其最相关的训练图像的hidden feature和offset。这个过程的相似性寻找是网络给出的，而作者认为可以利用图像检索的方式找到最相似图像，如通过Bag-of-Words的方法，而且也可以通过那些比较相似的图像作offset，因此作者有如下定义：
 
-​						 $ <img src="https://www.zhihu.com/equation?tex=\sum_{i=1}^{k} a_{i}\left(\mathbf{c}_{\mathcal{J}_{i}}, \mathbf{r}_{\mathcal{J}_{i}}\right), \sum a_{i}=1," alt="\sum_{i=1}^{k} a_{i}\left(\mathbf{c}_{\mathcal{J}_{i}}, \mathbf{r}_{\mathcal{J}_{i}}\right), \sum a_{i}=1," class="ee_img tr_noresize" eeimg="1"> $ 
+​						  <img src="https://www.zhihu.com/equation?tex=\sum_{i=1}^{k} a_{i}\left(\mathbf{c}_{\mathcal{J}_{i}}, \mathbf{r}_{\mathcal{J}_{i}}\right), \sum a_{i}=1," alt="\sum_{i=1}^{k} a_{i}\left(\mathbf{c}_{\mathcal{J}_{i}}, \mathbf{r}_{\mathcal{J}_{i}}\right), \sum a_{i}=1," class="ee_img tr_noresize" eeimg="1">  
 
 上述表明top-  <img src="https://www.zhihu.com/equation?tex=k" alt="k" class="ee_img tr_noresize" eeimg="1"> 个被检索到的相似图像，对他们的pose按照相似度进行线性加权。如何得到 <img src="https://www.zhihu.com/equation?tex=a_{i}" alt="a_{i}" class="ee_img tr_noresize" eeimg="1"> 呢？作者具体的做法是先计算各测试图像的描述子  <img src="https://www.zhihu.com/equation?tex=\mathbf{d}(\mathcal{I})," alt="\mathbf{d}(\mathcal{I})," class="ee_img tr_noresize" eeimg="1">  然后最小化  <img src="https://www.zhihu.com/equation?tex=\left\|\mathbf{d}(\mathcal{I})-\sum_{i=1}^{k} a_{i} \mathbf{d}\left(\mathcal{J}_{i}\right)\right\|_{2}" alt="\left\|\mathbf{d}(\mathcal{I})-\sum_{i=1}^{k} a_{i} \mathbf{d}\left(\mathcal{J}_{i}\right)\right\|_{2}" class="ee_img tr_noresize" eeimg="1">  subject to  <img src="https://www.zhihu.com/equation?tex=\sum a_{i}=1 ." alt="\sum a_{i}=1 ." class="ee_img tr_noresize" eeimg="1">  但注意这里的base poses认为是训练图像的pose，而基于CNN回归的方法的base pose是网络学习而得。
 
